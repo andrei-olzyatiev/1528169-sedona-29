@@ -5,22 +5,23 @@
     <meta name="keywords" content="Sedona, Седона, Аризона">
     <title>Седонна. Поиск жилья</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body class="page-body">
+  <body class="page-body inner-page">
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="https://via.placeholder.com/138x70.png?text=Sedona-find-hotel" width="138" height="70"  alt="Логотип сайта городка Седона">
+        <a class="main-header-logo" href="index.html">
+          <img src="https://via.placeholder.com/138x70.png?text=Sedona-find-hotel" width="138" height="70"  alt="Герб городка Седона">
         </a>
-       <ul class="site-navigation">
+       
+        <ul class="site-navigation site-navigation-inner">
          <li><a href="">Информация</a></li>
          <li><a href="">Фото и видео</a></li>
          <li><a href="">Карта штата</a></li>
-         <li><a href="">Гостиницы</a></li>
+         <li><a class="navigation-current" href="catalog.html">Гостиницы</a></li>
        </ul>
       </nav>
     </header>
@@ -36,15 +37,18 @@
         <h2>Найденные гостиницы</h2>
         <p>Найдено:<span>3</span></p>
         <p>Сортировка:</p>
+        
         <ul>
           <li><a href="">По цене</a></li>
           <li><a href="">По типу</a></li>
           <li><a href="">По рейтингу</a></li>
         </ul>
+        
         <ul>
           <li><button disabled="disabled"><a href="" alt="по возрастанию"></a> <span><!--тут должна быть иконка порядка сортировки--></span></button></li>
           <li><button><a href="" alt="по убыванию"><span><!--тут должна быть иконка порядка сортировки--></span></a></button></li>
         </ul>
+        
         <ul>
           <li>
             <img src="https://via.placeholder.com/135x90" alt="Amara Resort&Spa">
@@ -54,6 +58,7 @@
             <p>Гостиница от 4000р.</p>
             <a class="button-details" href="">Подробнее</a>
             <a class="button-order" href="">Забронировать</a>
+            
             <ul>
                 <li><span></span></li>
                 <li><span></span></li>
@@ -63,6 +68,7 @@
             </ul>
             <p>Рейтинг:<span>8,5</span></p>
           </li>
+          
           <li>
             <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn">
           <a href="http://">
