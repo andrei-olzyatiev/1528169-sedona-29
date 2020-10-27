@@ -14,10 +14,10 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-          <img src="https://via.placeholder.com/138x70.png?text=Sedona-find-hotel" width="138" height="70"  alt="Герб городка Седона">
+          <img src="img/sedona-icon.svg" width="138" height="70"  alt="Герб городка Седона">
         </a>
 
-        <ul class="site-navigation site-navigation-inner">
+        <ul class="site-navigation site-navigation-catalog">
          <li><a href="">Информация</a></li>
          <li><a href="">Фото и видео</a></li>
          <li><a href="">Карта штата</a></li>
@@ -45,19 +45,32 @@
         </ul>
 
         <ul>
-          <li><button disabled="disabled"><a href="" alt="по возрастанию"></a> <span><!--тут должна быть иконка порядка сортировки--></span></button></li>
-          <li><button><a href="" alt="по убыванию"><span><!--тут должна быть иконка порядка сортировки--></span></a></button></li>
+          <li>
+            <a href="" alt="по возрастанию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>
+            </a>
+          </li>
+          
+          <li>
+            <a href="" alt="по убыванию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+              </svg>
+            </a>
+          </li>
         </ul>
 
         <ul>
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Amara Resort&Spa">
+            <img src="img/Amara-resort-spa.png" width="135" height="90" alt="Amara Resort&Spa">
             <a href="http://">
               <h3>Amara Resort & Spa</h3>
             </a>
             <p>Гостиница от 4000р.</p>
             <a class="button-info-details" href="">Подробнее</a>
-            <a class="button-info-order" href="">Забронировать</a>
+            <a class="button-info-book" href="">Забронировать</a>
 
             <ul>
                 <li><span></span></li>
@@ -70,13 +83,13 @@
           </li>
 
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Desert Quail Inn">
+            <img src="img/Desert-quail-inn.png" alt="Desert Quail Inn">
           <a href="http://">
             <h3>Desert Quail Inn</h3>
           </a>
           <p>Мотель от 3000р.</p>
-          <a class="button-details" href="">Подробнее</a>
-          <a class="button-order" href="">Забронировать</a>
+          <a class="button-info-details" href="">Подробнее</a>
+          <a class="button-info-book" href="">Забронировать</a>
           <ul>
               <li><span></span></li>
               <li><span></span></li>
@@ -87,13 +100,13 @@
           <p>Рейтинг:<span>8,9</span></p>
           </li>
           <li>
-            <img src="https://via.placeholder.com/135x90" alt="Villas at Poco Diablo">
+            <img src="img/Villas-poco-diablo.png" width="135" height="90" alt="Villas at Poco Diablo">
             <a href="http://">
               <h3>Villas at Poco Diablo</h3>
             </a>
             <p>Апартаменты от 2000р.</p>
-            <a class="button-details" href="">Подробнее</a>
-            <a class="button-order" href="">Забронировать</a>
+            <a class="button-info-details" href="">Подробнее</a>
+            <a class="button-info-book" href="">Забронировать</a>
             <ul>
                 <li><span></span></li>
                 <li><span></span></li>
@@ -107,28 +120,49 @@
       </section>
     </main>
 
-    <footer>
-        <section>
-          <h3> #VISITSEDONA </h3>
-          <p>ТЕЛ: +7(495) 666-01-66 </p>
-        </section>
-        <section>
-          <ul>
-            <li>
-              <a href="#">ТВИТТЕР</a>
-            </li>
-            <li>
-              <a href="#">Фейсбук</a>
-            </li>
-            <li>
-              <a href="#">ЮТУБ</a>
-            </li>
-          </ul>
-        </section>
-        <p>
-          Website by
-          <a href="https://htmlacademy.ru">HTML Academy</a>
-        </p>
-      </footer>
-    </body>
-  </html>
+    <footer class="page-footer main-foter">
+
+      <h2 class="visually-hidden">Как с нами связаться</h2>
+
+      <section class="footer-contacts">
+        <h2> #VISITSEDONA </h2>
+        <a class="footer-phone" href="tel+74956660166">ТЕЛ: +7(495) 666-01-66 </a><!-- кажется так делают ссылки на телефоны? увидел на сайте сервис деска :^) -->
+      </section>
+      <section class="footer-social"><!-- нужно будет текст скрыть и вставить картинки (SVG?) -->
+        <ul>
+          <li>
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Twitter</span>
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Facebook</span>
+              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12h3V22H8V12H12V8H8V4H12Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a class="social-link" href="#">
+              <span class="visually-hidden">YouTube</span>
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </setion>
+
+      <p class="footer-copyright">
+        Website by
+        <a class="button-copyright" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="114" height="40" alt="HTML Academy"></a>        
+      </p>
+    </footer>
+  </body>
+</html>
