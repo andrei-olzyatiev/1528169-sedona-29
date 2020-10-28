@@ -28,11 +28,11 @@
 
     <main class="container">
 
-      <section>
+      <section class="cover">
         Welcome to the gorgeous Sedona "Because the Grand Canyon Sucks!"
       </section>
 
-      <h1 class="visually-hidden">Седона. Туристический порал</h1>
+      <h1 class="visually-hidden">Седона. Туристический портал</h1>
 
       <div>
         <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -97,9 +97,45 @@
       </section>
 
       <section class="appointment">
-        <h2>Заинтересовались? </h2>
-        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне<p>
-        <h2>ПОИСК ГОСТИНИЦЫ В седоне</h2><!-- Здесь будет форма записи -->
+        <h2>Заинтересовались?</h2>
+        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне<p>
+
+          <form action="https://echo.htmlacademy.ru" method="post">
+
+          <h3 class="visually-hidden">Поиск гостиницы в Cедоне</h3>
+
+          <button class="button-hotel" type="button">Поиск гостиницы в Седоне</button>
+
+          <div class="appointment-item">
+            <label for="appointment-date">Дата заезда</label>
+            <input id="appointment-date" type="text" name="appointment-date"
+            value="24 апреля 2017">
+            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+          </div>
+
+          <div class="appointment-item">
+            <label for="departure-date">Дата выезда</label>
+            <input id="departure-date" type="text" name="departure-date"
+            value="4 июля 2017">
+            <img src="img/calendar.svg" width="21" height="23" alt="календарь">
+          </div>
+
+          <div class="appointment-item">
+            <label for="adult">Взрослые:</label>
+            <input id="adult" type="number" name="adult" min="0" value="2">
+            <button class="button-minus" type="button">-</button>
+            <button class="button-plus" type="button">+</button>
+          </div>
+
+          <div class="appointment-item">
+            <label for="children">Дети:</label>
+            <input id="children" type="number" name="children" min="0" value="0">
+            <button class="button-minus" type="button">-</button>
+            <button class="button-plus" type="button">+</button>
+          </div>
+
+          <button type="submit">Найти</button>
+        </form>
       </section>
 
       <div class="map">
@@ -149,7 +185,7 @@
 
       <p class="footer-copyright">
         Website by
-        <a class="button-copyright" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="114" height="40" alt="HTML Academy"></a>        
+        <a class="button-copyright" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="114" height="40" alt="HTML Academy"></a>
       </p>
     </footer>
   </body>

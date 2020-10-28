@@ -8,22 +8,18 @@
   --basic-dark: #231F20;
   --basic-extra-dark: #333333;
   --basic-dark-red: #491213;
-  --basic-dark-brown: #766357;
-  --basic-brown: #766458;
+  --basic-brown: #766357;
+  --basic-brown2: #604E43;
+  --basic-dark-brown: #503E33;
   --basic-red: #DC6243;
   --basic-orange: #F49774;
   --basic-pink: #F4B1A4;
 
   --basic-blue: #81B3D2;
-  --basic-blue2: #81B3D3;
-  --basic-dark-blue: #23A9E1;
+  --basic-blue2:#669EC0;
+  --basic-dark-blue: #5496BD;
 
 	--background-footer-color: rgba(255, 255, 255, 0.9);
-	--button-info-details-hover: #669EC0;
-	--button-active: #5496BD;
-	--logo-press: #BDBBBC;
-	--search-hover: #604E43;
-	--search-active: #503E33;
 }
 
 .visually-hidden {
@@ -48,6 +44,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.cover {
+  background-image: url(/img/background-photo.png);
+}
+
+.cover .container .catalog-page {
+  background-image: url(/img/background-blur.png width="1200" height="217");
+}
+
 a {
   text-decoration: none;
 }
@@ -57,11 +61,6 @@ img {
   height: auto;
 }
 
-/* Main header */
-
-.inner-page .main-header {
-  background-color: var(--basic-white);
-}
 
 /* Main navigation */
 
@@ -73,16 +72,9 @@ img {
   background-color: transparent;
 }
 
-.main-navigation-wrapper {
-  background-color: var(--basic-white);
-}
 
 .site-navigation {
   list-style: none;
-}
-
-.site-navigation-current a:not([href]) {
-  background-color: var(--basic-white);
 }
 
 .site-navigation a {
@@ -103,6 +95,8 @@ img {
 .navigation-current {
   color: var(--basic-brown)
 }
+
+
 
 /* Features */
 .features-list {
@@ -216,6 +210,10 @@ button-hotel{
 }
 
   /* Filters */
+.filter{
+  color: var(--basic-white)
+}
+
 .filter legend {
   font-size: 16px;
   line-height: 21px;
@@ -243,7 +241,7 @@ button-hotel{
 }
 
 .filter-button:hover,
-.filter-button:focus  {
+.filter-button:active {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -316,11 +314,11 @@ button-hotel{
 
 .button-info-details:hover,
 .button-info-details:focus {
-  background-color: var(--special-blue);
+  background-color: var(--basic-blue2);
 }
 
 .button-info-details:active {
-  background-color: var(--special-blue-1);
+  background-color: var(--basic-dark-blue);
 }
 
 .button-info-book {
@@ -331,13 +329,12 @@ button-hotel{
   background-color: var(--basic-brown);
 }
 
-.button-info-book:hover,
-.button-info-book:focus {
-  background-color: var(--special-brown);
+.button-info-book:hover {
+  background-color: var(--basic-brown2);
 }
 
 .button-info-book:active {
-  background-color: var(--special-brown-1);
+  background-color: var(--basic-dark-brown);
 }
 
 .hotel_rate {
@@ -371,18 +368,18 @@ button-hotel{
 }
 
 /* Social button */
-.social-link {
+.link-social {
   color: inherit;
   background-color: var(--basic-blue);
 }
 
-.social-link:hover,
-.social-link:focus {
-background-color: var(--special-blue);
+.link-social:hover,
+.link-social:focus {
+background-color: var(--basic-blue2);
 }
 
-.social-link:active {
-  background-color: var(--special-blue-1);
+.link-social:active {
+  background-color: var(--basic-dark-blue);
 }
 
 .footer-copyright b {
