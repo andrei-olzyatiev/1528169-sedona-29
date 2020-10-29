@@ -1,24 +1,27 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
-  --basic-light-gray: #F2F2F2;
   --basic-gray: #EEEEEE;
-  --basic-dark-gray: #A9A9A9;
 
   --basic-dark: #231F20;
   --basic-extra-dark: #333333;
-  --basic-dark-red: #491213;
   --basic-brown: #766357;
   --basic-brown2: #604E43;
   --basic-dark-brown: #503E33;
   --basic-red: #DC6243;
+  --basic-dark-red: #491213;
   --basic-orange: #F49774;
   --basic-pink: #F4B1A4;
+
+  --basic-light-gray: #F2F2F2;
+  --basic-dark-gray: #A9A9A9;
+  --basic-dark-gray-2: #666666;
 
   --basic-blue: #81B3D2;
   --basic-blue2:#669EC0;
   --basic-dark-blue: #5496BD;
 
+  --background-html: #888888;
 	--background-footer-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -28,9 +31,13 @@
 
 /* Global */
 
+html {
+  background-color: var(--background-html);
+}
+
 body {
-  min-width: 1280px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -44,12 +51,18 @@ body {
   background-repeat: no-repeat;
 }
 
-.cover {
+.cover-index {
   background-image: url(/img/background-photo.png);
+  height: 509px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.cover .container .catalog-page {
-  background-image: url(/img/background-blur.png width="1200" height="217");
+.filter {
+  background-image: url(/img/background-blur.png);
+  width: 1200;
+  height: 217;
+  color: var(--basic-white);
 }
 
 a {
@@ -97,7 +110,6 @@ img {
 }
 
 
-
 /* Features */
 .features-list {
   list-style: none;
@@ -137,6 +149,8 @@ img {
 .feature-item-blue {
   background-color: var(--basic-blue);
   color: var(--basic-white);
+  width: 1200;
+  height: 256;
 }
 
 .feature-item-blue h3 {
@@ -154,21 +168,26 @@ img {
   background-color: var(--basic-gray);
 }
 
+
 /* Appointment */
+
 .appointment {
   list-style: none;
-}
-
-.appointment {
   text-align: center;
+  background-position: center;
+  width: 568px;
+  height: 481px;
 }
 
-button-hotel{
-  /* font-size: 21px;
+.button-hotel {
+  width: 568px;
+  height: 86px;
+  font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-white);
-  background-color: #766357; */
+  background-color: #766357;
+  height: 86px;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -176,6 +195,14 @@ button-hotel{
   text-transform: uppercase;
   background-color: var(--basic-brown);
   border: none;
+}
+
+.button-hotel:hover {
+  background-color: var(--basic-brown2);
+}
+
+.button-hotel:active {
+  background-color: var(--basic-dark-brown);
 }
 
 .appointment h3 {
@@ -196,7 +223,7 @@ button-hotel{
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
-  background-color: var(--special-l-gray);
+  background-color: var(--basic-light-gray);
   border: none;
 }
 
@@ -209,8 +236,34 @@ button-hotel{
   border: 2px solid #E5E5E5;
 }
 
+.submit {
+  width: 458px;
+  height: 58px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: #766357;
+  height: 86px;
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  border: none;
+}
+
+.submit:hover {
+  background-color: var(--basic-blue2);
+}
+
+.submit:active {
+  background-color: var(--basic-dark-blue);
+}
   /* Filters */
-.filter{
+
+.filter {
   color: var(--basic-white)
 }
 
@@ -233,15 +286,15 @@ button-hotel{
   color: var(--basic-white);
 }
 
-.filter-button {
+.button-filter {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-white);
   background: none;
 }
 
-.filter-button:hover,
-.filter-button:active {
+.button-filter:hover,
+.button-filter:active {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -260,7 +313,7 @@ button-hotel{
   color: var(--basic-black);
 }
 
-.hotels_sort {
+.hotel-sort {
   list-style: none;
 }
 
@@ -274,7 +327,7 @@ button-hotel{
   color: var(--basic-black);
   /*mix-blend-mode: normal;
   opacity: 0.3;
-  не понял, как задать цвет в состоянии покоя и в состоянии активный
+  /*не понял, как задать цвет в состоянии покоя и в состоянии активный
   */
 }
 
@@ -287,18 +340,30 @@ button-hotel{
   color: var(--basic-black);
 }
 
-.hotels_list {
+.hotel-list {
   list-style: none;
+  text-align: left;
 }
 
-.hotel_name {
+.hotel-name {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
 }
 
-.hotel_type, .hotel_price {
+.hotel-name:hover,
+.hotel-name:focus {
+  color: var(--basic-blue);
+}
+
+.hotel-name:active {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  /* Не понял как сделать тут, т.к. там цвет тот же, что и в обычном hotel-name, но там различия в layer */
+}
+
+.hotel-type, .hotel-price {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-dark);
@@ -337,11 +402,13 @@ button-hotel{
   background-color: var(--basic-dark-brown);
 }
 
-.hotel_rate {
+.hotel-rate {
   font-size: 14px;
   line-height: 21px;
-  color: var(--special-gray-3);
-  background-color: var(--special-gray-1);
+  color: var(--basic-dark-gray-2);
+  background-color: var(--basic-light-gray);
+  width: 110;
+  height: 27;
 }
 
 /* Main footer */
@@ -350,7 +417,7 @@ button-hotel{
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
-  background-color: var(--special-footer-background);
+  background-color: var(--background-footer-color);
   background-position: 0 0;
   background-repeat: repeat;
 }
@@ -367,15 +434,17 @@ button-hotel{
   list-style: none;
 }
 
-/* Social button */
+/* Social links */
 .link-social {
   color: inherit;
   background-color: var(--basic-blue);
+  width: 46px;
+  height: 48px;
 }
 
 .link-social:hover,
 .link-social:focus {
-background-color: var(--basic-blue2);
+  background-color: var(--basic-blue2);
 }
 
 .link-social:active {
@@ -391,9 +460,9 @@ background-color: var(--basic-blue2);
 
 .footer-copyright .button-copyright:hover,
 .footer-copyright .button-copyright:focus {
-color: var(--basic-blue);
+  color: var(--basic-blue);
 }
 
 .footer-copyright .button-copyright:active {
-color: var(--basic-gray)
+  color: var(--basic-gray)
 }
